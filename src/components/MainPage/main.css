@@ -1,0 +1,62 @@
+.mainLeft {
+  background: #0092ff;
+  padding: 8px 0;
+  height: 100vh;
+}
+
+.mainRight {
+  display: grid;
+  grid-row-gap: 30px;
+  text-align: center;
+  margin: 80px 150px 0 150px;
+}
+.icon {
+  color: #1890ff;
+  font-size: 36px;
+  margin: 20px;
+}
+.user {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr;
+}
+.user div {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-gap: 10px;
+  height: 100px;
+}
+.inp1 {
+  width: 563px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.mainRight input {
+  padding: 12px;
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom: 1px #f5f5f56e;
+}
+
+.check {
+  color: #1890ff;
+}
+
+.mail {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr;
+  width: 640px;
+}
+
+.mail input {
+  height: 55px;
+}
+.lock {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr;
+}
+
+.lock div {
+  display: grid;
+  grid-row-gap: 10px;
+}
