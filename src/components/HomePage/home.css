@@ -1,0 +1,55 @@
+.header {
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  align-items: center;
+}
+
+.header2 {
+  height: 60px;
+  background-color: #fcfcfce5;
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sider {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  background-color: #fcfcfce5;
+  height: 90vh;
+}
+
+.icon2 {
+  color: gray;
+  font-size: 28px;
+  margin: 16px;
+}
+
+.g {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 400;
+}
+
+.content {
+  background-color: #d8d8d8b9;
+}
+
+.statistic {
+  width: 440px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  margin: 50px 0 50px 850px;
+}
+
+.point {
+  font-size: 30px;
+  padding: 5px;
+  font-weight: bold;
+}
