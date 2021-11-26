@@ -36,6 +36,7 @@
 
 .content {
   background-color: #d8d8d8b9;
+  padding: 70px;
 }
 
 .statistic {
@@ -45,7 +46,7 @@
   justify-content: center;
   text-align: center;
   font-size: 10px;
-  margin: 50px 0 50px 850px;
+  margin: 0 0 50px 750px;
 }
 
 .point {

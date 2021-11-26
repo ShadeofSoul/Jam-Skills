@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { Layout } from "antd";
-import { Menu } from "antd";
 import logo from "../../media/logo.png";
 import { Typography } from "antd";
 import "./home.css";
@@ -10,12 +9,46 @@ import {
   LogoutOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
+import { Input } from "antd";
+import { Table, Button } from "antd";
+
+const { Search } = Input;
 
 const { Title } = Typography;
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
+
+const columns = [
+  {
+    title: "Name",
+    dataIndex: "name",
+  },
+  {
+    title: "Age",
+    dataIndex: "age",
+  },
+  {
+    title: "Address",
+    dataIndex: "address",
+  },
+];
+
+const data = [];
+for (let i = 0; i < 46; i++) {
+  data.push({
+    key: i,
+    name: `Edward King ${i}`,
+    age: 32,
+    address: `London, Park Lane no. ${i}`,
+  });
+}
 
 const Home = () => {
+  const onSearch = (value) => console.log(value);
+  // ===========
+  //  ===========  FOR TABLE =========
+  //====================================================
+
   return (
     <>
       <div className="header">
@@ -98,6 +131,26 @@ const Home = () => {
                 <span>Отказано</span>
                 <Title level={5}>76</Title>
               </div>
+            </div>
+            <Search
+              placeholder="input search text"
+              allowClear
+              onSearch={onSearch}
+              style={{ width: 350 }}
+            />
+            <div>
+              <div style={{ marginBottom: 16 }}>
+                <span style={{ marginLeft: 8 }}>
+                  {/* {hasSelected
+                    ? `Selected ${selectedRowKeys.length} items`
+                    : ""} */}
+                </span>
+              </div>
+              <Table
+                // rowSelection={rowSelection}
+                columns={columns}
+                dataSource={data}
+              />
             </div>
           </Content>
         </Layout>
