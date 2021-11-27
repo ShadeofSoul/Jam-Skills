@@ -11,6 +11,27 @@ export const RegForm = () => {
   function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
   }
+
+  // async () => {
+  //   const response = await fetch(
+  //     "https://api.jamskills.ml/api/testingusers/login",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         authorization: "Bearer",
+  //         "content-type": "application/json",
+  //       },
+  //       body: JSON.stringify({ name: "Андрей" }),
+  //     }
+  //   );
+  //   if (!response.ok) {
+  //     alert("Запрос не удался");
+  //     return;
+  //   }
+  //   const data = await response.json();
+  //   console.log(data);
+  // };
+
   return (
     <div className="mainRight">
       <Title style={{ color: "#1890FF" }} level={1}>

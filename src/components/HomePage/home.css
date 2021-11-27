@@ -20,7 +20,7 @@
 .sider {
   box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
   background-color: #fcfcfce5;
-  height: 90vh;
+  height: 115vh;
 }
 
 .icon2 {
@@ -36,7 +36,7 @@
 
 .content {
   background-color: #d8d8d8b9;
-  padding: 70px;
+  padding: 30px;
 }
 
 .statistic {
@@ -46,11 +46,25 @@
   justify-content: center;
   text-align: center;
   font-size: 10px;
-  margin: 0 0 50px 750px;
+  margin: 0 0 20px 750px;
 }
 
 .point {
   font-size: 30px;
   padding: 5px;
   font-weight: bold;
+}
+
+/* 
+==============For TABLE +++++++++++++++++++++++ */
+
+.desk {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.ant-table-pagination-right {
+  justify-content: center;
 }

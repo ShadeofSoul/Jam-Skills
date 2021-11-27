@@ -10,38 +10,12 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Input } from "antd";
-import { Table, Button } from "antd";
-
+import Desk from "./Desk";
 const { Search } = Input;
 
 const { Title } = Typography;
 
 const { Header, Sider, Content } = Layout;
-
-const columns = [
-  {
-    title: "Name",
-    dataIndex: "name",
-  },
-  {
-    title: "Age",
-    dataIndex: "age",
-  },
-  {
-    title: "Address",
-    dataIndex: "address",
-  },
-];
-
-const data = [];
-for (let i = 0; i < 46; i++) {
-  data.push({
-    key: i,
-    name: `Edward King ${i}`,
-    age: 32,
-    address: `London, Park Lane no. ${i}`,
-  });
-}
 
 const Home = () => {
   const onSearch = (value) => console.log(value);
@@ -70,7 +44,7 @@ const Home = () => {
             <HomeFilled className="icon2" />
             <span className="g">Домашняя страница</span>
           </div>
-          <div style={{ marginTop: "400px" }}>
+          <div style={{ marginTop: "550px" }}>
             <SettingOutlined className="icon2" />
             <span className="g"> Настройки</span>
             <br />
@@ -139,18 +113,7 @@ const Home = () => {
               style={{ width: 350 }}
             />
             <div>
-              <div style={{ marginBottom: 16 }}>
-                <span style={{ marginLeft: 8 }}>
-                  {/* {hasSelected
-                    ? `Selected ${selectedRowKeys.length} items`
-                    : ""} */}
-                </span>
-              </div>
-              <Table
-                // rowSelection={rowSelection}
-                columns={columns}
-                dataSource={data}
-              />
+              <Desk />
             </div>
           </Content>
         </Layout>
