@@ -94,3 +94,20 @@
   max-width: 700px;
   margin: 0 auto;
 }
+
+.ant-progress-text {
+  display: none;
+}
+.clock {
+  left: 20px;
+  bottom: 10px;
+  position: absolute;
+  text-align: center;
+}
+
+.timer {
+  position: relative;
+  width: 50px;
+  height: 70px;
+  margin: 0 auto;
+}

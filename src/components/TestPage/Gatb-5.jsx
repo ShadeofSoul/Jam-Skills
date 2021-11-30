@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Typography, Space, Progress, message } from "antd";
 import { Steps, Button } from "antd";
 import logo from "../../media/logo.png";
+import Timer from "./Timer";
+import gatb1 from "../../media/gatb1.png";
+import gatb2 from "../../media/gatb2.png";
 
 const { Title, Text } = Typography;
 const Gatb = () => {
@@ -10,6 +13,9 @@ const Gatb = () => {
   const [count, setCount] = useState(0);
   const [dis, setDis] = useState(true);
   const [time, setTime] = useState(100);
+  setTimeout(() => {
+    setTime(time - 0.4);
+  }, 1000);
 
   const next = () => {
     setCurrent(current + 1);
@@ -46,16 +52,39 @@ const Gatb = () => {
         </div>
       ) : null}
       <div style={start ? { display: "none" } : null} className="steps-content">
-        <Title>Найдите соответствующие фигуры в обоих множествах</Title>
-        <Progress
-          type="circle"
-          percent={time}
-          format={(percent) => `${percent} : `}
-        />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "0.8fr 0.2fr",
+            height: 80,
+          }}
+        >
+          <Title>Найдите соответствующие фигуры в обоих множествах</Title>
+          <div className="timer">
+            <Timer />
+            <Progress width={80} type="circle" percent={time} />
+          </div>
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            maxWidth: 950,
+            margin: "40px auto",
+          }}
+        >
+          <img src={gatb1} alt="gatb1" />
+          <img src={gatb2} alt="gatb2" />
+        </div>
       </div>
       <div className="steps-action">
         {start ? (
-          <Button type="primary " onClick={() => setStart(!start)}>
+          <Button
+            type="primary "
+            onClick={() => {
+              setStart(!start);
+            }}
+          >
             Всё понятно
           </Button>
         ) : (
@@ -63,15 +92,6 @@ const Gatb = () => {
             Продолжить
           </Button>
         )}
-        {
-          <Button
-            disabled={dis}
-            type="primary"
-            onClick={() => message.success("Тестирование завершено!")}
-          >
-            Завершить
-          </Button>
-        }
       </div>
     </div>
   );

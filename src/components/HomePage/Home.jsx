@@ -49,7 +49,7 @@ const Home = () => {
             <HomeFilled className="icon2" />
             <span className="g">Домашняя страница</span>
           </div>
-          <div style={{ marginTop: "550px" }}>
+          <div style={{ marginTop: "400px" }}>
             <SettingOutlined className="icon2" />
             <span className="g"> Настройки</span>
             <br />

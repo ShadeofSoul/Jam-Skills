@@ -41,14 +41,5 @@ export function post_choise(index, name, token) {
       },
     });
     console.log(res);
-    // const response = await fetch(POST_HOL, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json;charset=utf-8",
-    //     Authorization: `Bearer ${token}`,
-    //   },
-    //   body: JSON.stringify(ans),
-    // });
-    // console.log(response);
   };
 }

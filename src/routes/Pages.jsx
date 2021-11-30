@@ -5,6 +5,7 @@ import AuthContextProvider from "../components/MainPage/auth";
 import Main from "../components/MainPage/Main";
 import Gatb from "../components/TestPage/Gatb-5";
 import HolTest from "../components/TestPage/HolTest";
+import Timer from "../components/TestPage/Timer";
 import UskTest from "../components/TestPage/UskTest";
 
 const Pages = () => {
@@ -15,6 +16,7 @@ const Pages = () => {
       <Route exact path="/holtest" element={<HolTest />} />
       <Route exact path="/usktest" element={<UskTest />} />
       <Route exact path="/gatb-5test" element={<Gatb />} />
+      <Route exact path="/timer" element={<Timer />} />
     </Routes>
   );
 };
