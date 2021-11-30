@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import { Input } from "antd";
 import Desk from "./Desk";
+import { useSelector } from "react-redux";
 const { Search } = Input;
 
 const { Title } = Typography;
@@ -19,6 +20,10 @@ const { Header, Sider, Content } = Layout;
 
 const Home = () => {
   const onSearch = (value) => console.log(value);
+  const user = useSelector((state) => state.user);
+  console.log(user);
+  const success = useSelector((state) => state.user.success);
+  console.log(success);
   // ===========
   //  ===========  FOR TABLE =========
   //====================================================

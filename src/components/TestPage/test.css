@@ -10,20 +10,87 @@
 
 .steps-content {
   min-height: 200px;
-  margin-top: 16px;
-  padding-top: 80px;
+  padding-top: 40px;
   text-align: center;
-  background-color: #fafafa;
-  border: 1px dashed #e9e9e9;
-  border-radius: 2px;
+  background-color: #ffff;
 }
 
 .steps-action {
-  margin-top: 40px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
 
 .steps-action button {
-  width: 350px;
+  width: 470px;
+}
+
+/* ==============================
+======================  FOR HOLLUND TEST======
+=============================================== */
+.holTest,
+.uskTest {
+  text-align: center;
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.buttons button {
+  width: 200px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons button:focus {
+  background-color: #1890ff;
+}
+
+/* ==============================
+======================  FOR USK TEST======
+=============================================== */
+.usk {
+  max-width: 800px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+}
+.uskQ {
+  border: 1px solid #bfbfbf;
+  max-width: 400px;
+  padding: 45px;
+}
+
+.uskA {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.uskA button {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px;
+  background-color: #ffff;
+  border: 1px solid #bfbfbf;
+  padding: 5px;
+}
+
+.uskA button:focus {
+  background-color: #1890ff;
+  color: #ffff;
+}
+
+/* ==============================
+======================  FOR USK TEST======
+=============================================== */
+
+.gatbTest {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }

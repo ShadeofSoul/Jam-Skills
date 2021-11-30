@@ -5,7 +5,8 @@ import { Typography } from "antd";
 import "./main.css";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Checkbox } from "antd";
-import { LogForm, RegForm } from "./Forms";
+import { RegForm } from "./RegForm";
+import LoginForm from "./LoginForm";
 
 const { Title } = Typography;
 
@@ -58,7 +59,7 @@ const Main = () => {
             </Button>
           </Space>
         </Col>
-        <Col span={15}>{log ? <RegForm /> : <LogForm />}</Col>
+        <Col span={15}>{log ? <RegForm /> : <LoginForm />}</Col>
       </Row>
     </>
   );
