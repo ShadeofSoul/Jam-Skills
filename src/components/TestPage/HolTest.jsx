@@ -6,9 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   get_testing_user,
   get_tests,
-  post_choise,
+  post_hol_choise,
 } from "../../redux/actions/tests";
 import { Typography, Space, Progress } from "antd";
+import { Link } from "react-router-dom";
 
 const { Title, Text } = Typography;
 
@@ -167,7 +168,7 @@ const Test = () => {
   }, [token]);
 
   function userChoise(index, name) {
-    dispatch(post_choise(index, name, token));
+    dispatch(post_hol_choise(index, name, token));
     setDis(false);
   }
 
@@ -275,7 +276,7 @@ const Test = () => {
               type="primary"
               onClick={() => message.success("Тестирование завершено!")}
             >
-              Завершить
+              <Link to={"/usktest"}>Завершить</Link>
             </Button>
           )}
         </div>

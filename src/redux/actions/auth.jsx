@@ -1,4 +1,10 @@
-import { AUTH_API_LOGIN, AUTH_USER, AUTH_ERROR } from "../helpers";
+import axios from "axios";
+import {
+  AUTH_API_LOGIN,
+  AUTH_USER,
+  AUTH_ERROR,
+  AUTH_API_REG,
+} from "../helpers";
 
 export function loginUser(userData) {
   return async (dispatch) => {
@@ -36,3 +42,23 @@ export function loginUser(userData) {
     }
   };
 }
+
+export const registerUser = (newUser) => {
+  console.log(newUser);
+  return async (dispatch) => {
+    const response = await fetch(AUTH_API_REG, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(newUser),
+    });
+
+    if (!response.ok) {
+      alert("Запрос не удался");
+      return;
+    } else {
+      alert("Регистрация прошла успешно");
+    }
+  };
+};

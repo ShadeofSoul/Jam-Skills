@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Typography, Space, Progress, message } from "antd";
 import { Steps, Button } from "antd";
 import logo from "../../media/logo.png";
+import { Link } from "react-router-dom";
+import { post_usk_choise } from "../../redux/actions/tests";
+import { useDispatch, useSelector } from "react-redux";
 
 const { Step } = Steps;
 
@@ -111,8 +114,12 @@ const UskTest = () => {
     setCount(count + 15);
     setDis(true);
   };
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state?.user?.user?.token);
+  console.log(token);
 
-  function userChoise(code) {
+  function userChoise(index, code) {
+    dispatch(post_usk_choise(index, code, token));
     setDis(false);
   }
 
@@ -157,7 +164,11 @@ const UskTest = () => {
             </div>
             <div className="uskA">
               {answers.map((element) => (
-                <button onClick={() => userChoise(element.code)}>
+                <button
+                  onClick={() =>
+                    userChoise(steps[current].content.index, element.code)
+                  }
+                >
                   {element.text}
                 </button>
               ))}
@@ -183,7 +194,7 @@ const UskTest = () => {
             type="primary"
             onClick={() => message.success("Тестирование завершено!")}
           >
-            Завершить
+            <Link to={"/gatb-5test"}>Завершить</Link>
           </Button>
         )}
       </div>

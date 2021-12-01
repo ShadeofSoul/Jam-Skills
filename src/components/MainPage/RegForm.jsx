@@ -4,29 +4,18 @@ import { Checkbox } from "antd";
 import { Button, Input, Alert } from "antd";
 import { Typography } from "antd";
 import "./main.css";
-import { useAuth } from "./auth";
+
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { loginUser } from "../../redux/actions/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser, registerUser } from "../../redux/actions/auth";
 
 const { Title } = Typography;
 
 export const RegForm = () => {
-  const {
-    registerUser,
-    loginUser,
-    user,
-    loading,
-    errorMessage,
-    success,
-    clearState,
-    checkAuth,
-    logout,
-  } = useAuth();
-
   const [newUser, setNewUser] = useState({});
   const navigate = useNavigate();
-
+  const success = useSelector((state) => state?.user?.success);
+  console.log(success);
   const handleChange = (e) => {
     let newObj = {
       ...newUser,
@@ -34,24 +23,17 @@ export const RegForm = () => {
     newObj[e.target.name] = e.target.value;
     setNewUser(newObj);
   };
-
+  const dispatch = useDispatch();
   const signup = (e) => {
     e.preventDefault();
-    try {
-      registerUser(newUser);
-    } catch (e) {
-      console.log(e);
-    }
+    console.log(newUser);
+    dispatch(registerUser(newUser));
   };
 
   useEffect(() => {
     if (success) {
       navigate.push("/login");
     }
-
-    return () => {
-      clearState();
-    };
   }, [success]);
 
   function onChange(e) {
@@ -63,14 +45,14 @@ export const RegForm = () => {
       <Title style={{ color: "#1890FF" }} level={1}>
         Регистрация
       </Title>
-      {errorMessage ? (
-        <Alert
-          message="Error"
-          description={errorMessage}
-          type="error"
-          showIcon
-        />
-      ) : null}
+      {/* {errorMessage ? ( */}
+      <Alert
+        message="Error"
+        // description={errorMessage}
+        type="error"
+        showIcon
+      />
+      {/* ) : null} */}
       <div className="user">
         <UserOutlined className="icon" />
         <div>
