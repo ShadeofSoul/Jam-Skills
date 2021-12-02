@@ -23,3 +23,6 @@ export const AUTH_ERROR = "AUTH/AUTH_ERROR";
 export const REGISTER_USER = "AUTH/REGISTER_USER";
 export const LOGOUT_USER = "AUTH/LOGOUT_USER";
 export const REG_USER = "REG/REG_USER";
+export const PUT_GATB = "/PUT_GATB";
+export const PUT_HOL = "/PUT_HOL";
+export const PUT_USK = "/PUT_USK";

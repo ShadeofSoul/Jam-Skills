@@ -130,13 +130,16 @@ const Gatb = () => {
   const [cancel, setCancel] = useState(false);
   const [current, setCurrent] = useState(0);
   const [answer, setAnswer] = useState(0);
+  const [percent, setPercent] = useState(0);
   useEffect(() => {
     if (img1 === img2 && typeof img1 === "number" && typeof img2 === "number") {
       setCount(true);
-
-      data = data.filter((el) => el.key !== img2);
-      data2 = data2.filter((el) => el.key !== img2);
-      setDis(true);
+      if (data.length === 1) {
+        setDis(false);
+      } else {
+        data = data.filter((el) => el.key !== img2);
+        data2 = data2.filter((el) => el.key !== img2);
+      }
       next();
       setTimeout(() => {
         setCount(false);
@@ -159,9 +162,9 @@ const Gatb = () => {
   }, 1000);
 
   function checkImg1(key) {
-    setDis(false);
     setImg1("");
     setImg1(key);
+    setDis(false);
   }
   function checkImg2(key2) {
     setImg2("");
@@ -173,6 +176,7 @@ const Gatb = () => {
 
   const next = () => {
     setCurrent(current + 1);
+    setPercent(percent + 12);
   };
   function userChoise(answer) {
     dispatch(post_gatb_choise(answer, token));
@@ -226,6 +230,7 @@ const Gatb = () => {
             <Progress width={80} type="circle" percent={time} />
           </div>
         </div>
+        <Progress style={{ width: 500 }} percent={percent} status="active" />
         <div
           style={{
             display: "grid",

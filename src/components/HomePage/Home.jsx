@@ -22,9 +22,7 @@ const Home = () => {
   const onSearch = (value) => console.log(value);
   const user = useSelector((state) => state.user);
   console.log(user);
-  const success = useSelector((state) => state.user.success);
-  console.log(success);
-  // ===========
+
   //  ===========  FOR TABLE =========
   //====================================================
 

@@ -45,7 +45,7 @@ export const RegForm = () => {
       <Title style={{ color: "#1890FF" }} level={1}>
         Регистрация
       </Title>
-      {/* {errorMessage ? ( */}
+      {/* {errorMessage ? (
       <Alert
         message="Error"
         // description={errorMessage}
