@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Checkbox } from "antd";
-import { Button, Input, Alert } from "antd";
+import { Button, Input } from "antd";
 import { Typography } from "antd";
 import "./main.css";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { loginUser, registerUser } from "../../redux/actions/auth";
+import { registerUser } from "../../redux/actions/auth";
 
 const { Title } = Typography;
 

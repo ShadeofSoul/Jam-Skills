@@ -27,7 +27,7 @@ import True from "../../GATB/image 1.svg";
 import { Link } from "react-router-dom";
 import Cancel from "../../GATB/cancel.png";
 import { useDispatch, useSelector } from "react-redux";
-import { post_gatb_choise, post_hol_choise } from "../../redux/actions/tests";
+import { post_gatb_choise } from "../../redux/actions/tests";
 // ============DATA=================
 const { Step } = Steps;
 

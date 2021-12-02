@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Table, Button, Space, Progress } from "antd";
+import { Table, Space, Progress } from "antd";
 import { Link } from "react-router-dom";
 
-const { Column, ColumnGroup } = Table;
+const { Column } = Table;
 
 const columns = [
   {
@@ -69,7 +69,6 @@ const columns = [
     width: "20%",
   },
 ];
-console.log("ghjkl");
 
 const uskAnswers = JSON.parse(localStorage.getItem("usk"))
   ? JSON.parse(localStorage.getItem("usk")).uskAnswers

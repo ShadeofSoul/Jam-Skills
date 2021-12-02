@@ -1,13 +1,9 @@
 import { Steps, Button, message } from "antd";
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import "./test.css";
 import logo from "../../media/logo.png";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  get_testing_user,
-  get_tests,
-  post_hol_choise,
-} from "../../redux/actions/tests";
+import { post_hol_choise } from "../../redux/actions/tests";
 import { Typography, Space, Progress } from "antd";
 import { Link } from "react-router-dom";
 
@@ -160,12 +156,12 @@ const Test = () => {
   console.log(token);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (token) {
-      dispatch(get_tests(token));
-      dispatch(get_testing_user(token));
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (token) {
+  //     dispatch(get_tests(token));
+  //     dispatch(get_testing_user(token));
+  //   }
+  // }, [token]);
 
   function userChoise(index, name) {
     dispatch(post_hol_choise(index, name, token));

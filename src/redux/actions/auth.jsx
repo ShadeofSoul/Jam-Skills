@@ -1,4 +1,3 @@
-import axios from "axios";
 import {
   AUTH_API_LOGIN,
   AUTH_USER,

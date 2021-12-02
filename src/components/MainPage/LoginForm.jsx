@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
-import { Checkbox } from "antd";
+import React, { useState } from "react";
+import { LockOutlined, MailOutlined } from "@ant-design/icons";
+
 import { Button, Input, Alert } from "antd";
 import { Typography } from "antd";
 import "./main.css";
-import { useAuth } from "./auth";
+
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../redux/actions/auth";

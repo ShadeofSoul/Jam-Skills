@@ -1,6 +1,5 @@
 import {
   GET_TESTING_USER_API,
-  GET_TESTS,
   GET_TESTS_API,
   POST_GATB,
   POST_HOL,
@@ -55,7 +54,7 @@ export function post_hol_choise(index, name, token) {
   localStorage.setItem("hol", JSON.stringify(hol));
 
   return async (dispatch) => {
-    let res = await axios.post(POST_HOL, answer, {
+    await axios.post(POST_HOL, answer, {
       headers: {
         "Content-Type": "application/json;charset=utf-8",
         Authorization: `Bearer ${token}`,
@@ -94,7 +93,7 @@ export function post_usk_choise(index, code, token) {
   localStorage.setItem("usk", JSON.stringify(usk));
 
   return async (dispatch) => {
-    let res = await axios.post(POST_USK, answer, {
+    await axios.post(POST_USK, answer, {
       headers: {
         "Content-Type": "application/json;charset=utf-8",
         Authorization: `Bearer ${token}`,
@@ -130,7 +129,7 @@ export function post_gatb_choise(scores, token) {
   localStorage.setItem("gatb", JSON.stringify(gatb));
 
   return async (dispatch) => {
-    let res = await axios.post(POST_GATB, answer, {
+    await axios.post(POST_GATB, answer, {
       headers: {
         "Content-Type": "application/json;charset=utf-8",
         Authorization: `Bearer ${token}`,

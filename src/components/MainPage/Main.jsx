@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Row, Col, Space, Button, Input } from "antd";
+import { Row, Col, Space, Button } from "antd";
 import logo from "../../media/Rectangle 1.png";
 import { Typography } from "antd";
 import "./main.css";
-import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
-import { Checkbox } from "antd";
+
 import { RegForm } from "./RegForm";
 import LoginForm from "./LoginForm";
 
